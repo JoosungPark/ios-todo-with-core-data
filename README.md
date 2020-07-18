@@ -21,3 +21,8 @@ parent Todo의 status는 다음의 우선순위에 따라 child todo 모든 stat
 - open > close > delete
 
 해당 샘플은 RxSwift+CoreData로 구성할 예정입니다.
+
+Folder는 order를 가진다.
+
+향후 과제 : 
+폴더를 생성한다, Todo를 생성한다 등의 유스케이스를 지원하는 TodoController를 만든다.
