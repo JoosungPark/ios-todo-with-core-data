@@ -1,0 +1,99 @@
+PODS:
+  - Action (4.1.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - Alamofire (5.2.1)
+  - Differentiator (4.0.1)
+  - Nimble (8.1.1)
+  - ObjectMapper (4.2.0)
+  - Quick (3.0.0)
+  - RxAlamofire (5.3.2):
+    - RxAlamofire/Core (= 5.3.2)
+  - RxAlamofire/Core (5.3.2):
+    - Alamofire (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxOptional (4.1.0):
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
+
+DEPENDENCIES:
+  - Action (~> 4.1.0)
+  - Alamofire (~> 5.2.1)
+  - Nimble
+  - ObjectMapper (~> 4.2.0)
+  - Quick
+  - RxAlamofire (~> 5.3.1)
+  - RxBlocking (~> 5.1.1)
+  - RxCocoa (~> 5.1.1)
+  - RxDataSources (~> 4.0.1)
+  - RxGesture (~> 3.0.2)
+  - RxOptional (~> 4.1.0)
+  - RxSwift (~> 5.1.1)
+  - RxSwiftExt (~> 5.2.0)
+  - RxTest (~> 5.1.1)
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - Alamofire
+    - Differentiator
+    - Nimble
+    - ObjectMapper
+    - Quick
+    - RxAlamofire
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - RxTest
+
+SPEC CHECKSUMS:
+  Action: 79e6c5dc91e13eea045ab6744b3e5609086671aa
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  RxAlamofire: 9234f30d94bfae9889c2aaba36358312083a7ad3
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+
+PODFILE CHECKSUM: c9b9cc9d878e2be348ac56bac77e3ed81a5eb765
+
+COCOAPODS: 1.9.3
