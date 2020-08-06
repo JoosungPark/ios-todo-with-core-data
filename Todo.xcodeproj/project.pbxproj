@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0BCF94518D9152B5B6F517F8 /* Pods_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152B0B91CABB286893105BA8 /* Pods_Todo.framework */; };
 		1CA2E90B38367455AB8F926B /* Pods_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604401DF2101D772646643ED /* Pods_TodoTests.framework */; };
+		234D217C24DBD3C80044CA05 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D217B24DBD3C80044CA05 /* CoreDataManager.swift */; };
 		4438392824C2A6F50047A8CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438392724C2A6F50047A8CF /* AppDelegate.swift */; };
 		4438392A24C2A6F50047A8CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438392924C2A6F50047A8CF /* SceneDelegate.swift */; };
 		4438392C24C2A6F50047A8CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438392B24C2A6F50047A8CF /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		152B0B91CABB286893105BA8 /* Pods_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234D217B24DBD3C80044CA05 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		4438392424C2A6F50047A8CF /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4438392724C2A6F50047A8CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4438392924C2A6F50047A8CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4438394F24C2AC850047A8CF /* Folder+CoreDataClass.swift */,
 				4438395024C2AC850047A8CF /* Folder+CoreDataProperties.swift */,
 				4438394A24C2A75E0047A8CF /* Todo.xcdatamodeld */,
+				234D217B24DBD3C80044CA05 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -151,7 +154,6 @@
 				C1D8543278BE96E3B2943DFA /* Pods-TodoTests.debug.xcconfig */,
 				D0FB0BFEDF11CA2582FA0EC2 /* Pods-TodoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -347,6 +349,7 @@
 				4438392824C2A6F50047A8CF /* AppDelegate.swift in Sources */,
 				4438392A24C2A6F50047A8CF /* SceneDelegate.swift in Sources */,
 				4438395124C2AC850047A8CF /* Todo+CoreDataClass.swift in Sources */,
+				234D217C24DBD3C80044CA05 /* CoreDataManager.swift in Sources */,
 				4438394C24C2A75E0047A8CF /* Todo.xcdatamodeld in Sources */,
 				4438395224C2AC850047A8CF /* Todo+CoreDataProperties.swift in Sources */,
 			);
