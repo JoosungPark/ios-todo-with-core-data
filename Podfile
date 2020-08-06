@@ -14,6 +14,7 @@ def todo_shared
   pod 'RxGesture', '~> 3.0.2'
   pod 'RxDataSources', '~> 4.0.1'
   pod 'Action', '~> 4.1.0'
+  pod "RxCoreData", "~> 1.0.0"
 end
 
 def todo_test_pods
