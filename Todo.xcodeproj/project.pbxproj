@@ -10,6 +10,7 @@
 		0BCF94518D9152B5B6F517F8 /* Pods_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152B0B91CABB286893105BA8 /* Pods_Todo.framework */; };
 		1CA2E90B38367455AB8F926B /* Pods_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604401DF2101D772646643ED /* Pods_TodoTests.framework */; };
 		234D217C24DBD3C80044CA05 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D217B24DBD3C80044CA05 /* CoreDataManager.swift */; };
+		23CD6505253FD77D0098D31B /* EntityNamePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD6504253FD77D0098D31B /* EntityNamePresentable.swift */; };
 		4438392824C2A6F50047A8CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438392724C2A6F50047A8CF /* AppDelegate.swift */; };
 		4438392A24C2A6F50047A8CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438392924C2A6F50047A8CF /* SceneDelegate.swift */; };
 		4438392C24C2A6F50047A8CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438392B24C2A6F50047A8CF /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		152B0B91CABB286893105BA8 /* Pods_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234D217B24DBD3C80044CA05 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		23CD6504253FD77D0098D31B /* EntityNamePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityNamePresentable.swift; sourceTree = "<group>"; };
 		4438392424C2A6F50047A8CF /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4438392724C2A6F50047A8CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4438392924C2A6F50047A8CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,9 +82,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23CD6503253FD7620098D31B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				23CD6504253FD77D0098D31B /* EntityNamePresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4438391B24C2A6F50047A8CF = {
 			isa = PBXGroup;
 			children = (
+				23CD6503253FD7620098D31B /* Protocols */,
 				4438394924C2A7220047A8CF /* CoreData */,
 				4438392624C2A6F50047A8CF /* Todo */,
 				4438393D24C2A6F80047A8CF /* TodoTests */,
@@ -352,6 +363,7 @@
 				234D217C24DBD3C80044CA05 /* CoreDataManager.swift in Sources */,
 				4438394C24C2A75E0047A8CF /* Todo.xcdatamodeld in Sources */,
 				4438395224C2AC850047A8CF /* Todo+CoreDataProperties.swift in Sources */,
+				23CD6505253FD77D0098D31B /* EntityNamePresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

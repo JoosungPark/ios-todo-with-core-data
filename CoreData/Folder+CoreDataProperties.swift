@@ -14,10 +14,18 @@ import CoreData
 extension Folder {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Folder> {
-        return NSFetchRequest<Folder>(entityName: "Folder")
+        return NSFetchRequest<Folder>(entityName: Folder.entityName)
     }
 
 }
+
+extension Folder: EntityNamePresentable {
+    static var entityName: String {
+        get { return "Folder" }
+    }
+}
+
+
 
 // MARK: Generated accessors for todos
 extension Folder {
