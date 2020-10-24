@@ -24,18 +24,10 @@ class TodoTests: XCTestCase {
         let folderController = FolderController()
         let testFolder1 = "testFolder1"
         
-        let resultTestFolder1: Folder = folderController.createFolder(name: testFolder1)
+        let resultTestFolder1: Folder = folderController.createFolder(title: testFolder1)
 
-        XCTAssertEqual(resultTestFolder1.name, testFolder1)
+        XCTAssertEqual(resultTestFolder1.title, testFolder1)
         XCTAssertEqual(resultTestFolder1.order, 1)
         
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

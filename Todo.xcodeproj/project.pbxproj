@@ -24,6 +24,7 @@
 		4438395324C2AC850047A8CF /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438394F24C2AC850047A8CF /* Folder+CoreDataClass.swift */; };
 		4438395424C2AC850047A8CF /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438395024C2AC850047A8CF /* Folder+CoreDataProperties.swift */; };
 		449760A22543D6C60037749B /* FolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449760A12543D6C60037749B /* FolderType.swift */; };
+		449760AD2543DDE10037749B /* FolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449760AC2543DDE10037749B /* FolderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		4438395024C2AC850047A8CF /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		449760A12543D6C60037749B /* FolderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderType.swift; sourceTree = "<group>"; };
 		449760A52543D89C0037749B /* Todo 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Todo 2.xcdatamodel"; sourceTree = "<group>"; };
+		449760AC2543DDE10037749B /* FolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderController.swift; sourceTree = "<group>"; };
 		604401DF2101D772646643ED /* Pods_TodoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACD2BBE2DB7C374784A0D74 /* Pods-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.debug.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		A1328C3F3FFE1B918B400D49 /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				23CD6503253FD7620098D31B /* Protocols */,
 				4438394924C2A7220047A8CF /* CoreData */,
+				449760AB2543DDB10037749B /* DataController */,
 				4438392724C2A6F50047A8CF /* AppDelegate.swift */,
 				4438392924C2A6F50047A8CF /* SceneDelegate.swift */,
 				4438392B24C2A6F50047A8CF /* ViewController.swift */,
@@ -150,6 +153,14 @@
 				234D217B24DBD3C80044CA05 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		449760AB2543DDB10037749B /* DataController */ = {
+			isa = PBXGroup;
+			children = (
+				449760AC2543DDE10037749B /* FolderController.swift */,
+			);
+			path = DataController;
 			sourceTree = "<group>";
 		};
 		A28B09EB5F21F2BBA3474376 /* Frameworks */ = {
@@ -363,6 +374,7 @@
 				449760A22543D6C60037749B /* FolderType.swift in Sources */,
 				4438395324C2AC850047A8CF /* Folder+CoreDataClass.swift in Sources */,
 				4438392824C2A6F50047A8CF /* AppDelegate.swift in Sources */,
+				449760AD2543DDE10037749B /* FolderController.swift in Sources */,
 				4438392A24C2A6F50047A8CF /* SceneDelegate.swift in Sources */,
 				4438395124C2AC850047A8CF /* Todo+CoreDataClass.swift in Sources */,
 				234D217C24DBD3C80044CA05 /* CoreDataManager.swift in Sources */,

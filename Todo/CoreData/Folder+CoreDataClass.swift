@@ -31,3 +31,13 @@ public extension Folder {
         }
     }
 }
+
+public extension Folder {
+    class func newInstance(title: String) -> Folder {
+        let context = CoreDataManager.shared.managedContext
+        let entity = NSEntityDescription.entity(forEntityName: Folder.entityName, in: context)!
+        let data = NSManagedObject(entity: entity, insertInto: context) as! Folder
+        data.title = title
+        return data
+    }
+}
