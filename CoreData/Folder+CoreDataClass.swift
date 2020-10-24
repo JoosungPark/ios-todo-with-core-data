@@ -17,4 +17,17 @@ public class Folder: NSManagedObject {
     @NSManaged public var title: String!
     @NSManaged public var isOpened: Bool
     @NSManaged public var todos: NSMutableOrderedSet
+    @NSManaged var folderTypeValue: String
+}
+
+public extension Folder {
+    var folderType: FolderType {
+        get {
+            return FolderType(rawValue: self.folderTypeValue)!
+        }
+
+        set {
+            self.folderTypeValue = newValue.rawValue
+        }
+    }
 }
