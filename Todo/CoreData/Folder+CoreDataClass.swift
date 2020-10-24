@@ -20,24 +20,3 @@ public class Folder: NSManagedObject {
     @NSManaged var folderTypeValue: String
 }
 
-public extension Folder {
-    var folderType: FolderType {
-        get {
-            return FolderType(rawValue: self.folderTypeValue)!
-        }
-
-        set {
-            self.folderTypeValue = newValue.rawValue
-        }
-    }
-}
-
-public extension Folder {
-    class func newInstance(title: String) -> Folder {
-        let context = CoreDataManager.shared.managedContext
-        let entity = NSEntityDescription.entity(forEntityName: Folder.entityName, in: context)!
-        let data = NSManagedObject(entity: entity, insertInto: context) as! Folder
-        data.title = title
-        return data
-    }
-}

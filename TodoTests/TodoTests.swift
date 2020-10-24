@@ -30,13 +30,13 @@ class TodoTests: XCTestCase {
         XCTAssertEqual(resultTestFolder1.order, 1)
         
         // retrieve
-        let testFolderId = 1
+        let testFolderId: Int64 = 1
         let retrievedFolder: Folder? = folderController.retrieveFolder(id: testFolderId)
         
         XCTAssertNotNil(retrievedFolder)
-        XCTAssertEqual(retrievedFolder.id, testFolderId)
+        XCTAssertEqual(retrievedFolder!.id, testFolderId)
         
-        let testNilableFolderId = 0
+        let testNilableFolderId: Int64 = 0
         let nilableFolder: Folder? = folderController.retrieveFolder(id: testNilableFolderId)
         XCTAssertNil(nilableFolder)
         

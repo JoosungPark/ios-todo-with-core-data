@@ -25,6 +25,39 @@ extension Folder: EntityNamePresentable {
     }
 }
 
+public extension Folder {
+    var folderType: FolderType {
+        get {
+            return FolderType(rawValue: self.folderTypeValue)!
+        }
+
+        set {
+            self.folderTypeValue = newValue.rawValue
+        }
+    }
+}
+
+public extension Folder {
+    class func newInstance(title: String) -> Folder {
+        let context = CoreDataManager.shared.managedContext
+        let entity = NSEntityDescription.entity(forEntityName: Folder.entityName, in: context)!
+        let data = NSManagedObject(entity: entity, insertInto: context) as! Folder
+        data.title = title
+        return data
+    }
+    
+    class func fetchOne(id: FolderId) throws -> Folder?  {
+        let manager = CoreDataManager.shared
+        let context = manager.managedContext
+        
+        let fetch: NSFetchRequest<Folder> = Folder.fetchRequest()
+        fetch.predicate = NSPredicate(format: "%K == %lld", #keyPath(Folder.id), id)
+        
+        return try context.fetch(fetch).first
+    }
+}
+
+
 
 
 // MARK: Generated accessors for todos
