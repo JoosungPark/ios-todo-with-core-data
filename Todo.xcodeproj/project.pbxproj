@@ -96,8 +96,6 @@
 		4438391B24C2A6F50047A8CF = {
 			isa = PBXGroup;
 			children = (
-				23CD6503253FD7620098D31B /* Protocols */,
-				4438394924C2A7220047A8CF /* CoreData */,
 				4438392624C2A6F50047A8CF /* Todo */,
 				4438393D24C2A6F80047A8CF /* TodoTests */,
 				4438392524C2A6F50047A8CF /* Products */,
@@ -118,6 +116,8 @@
 		4438392624C2A6F50047A8CF /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				23CD6503253FD7620098D31B /* Protocols */,
+				4438394924C2A7220047A8CF /* CoreData */,
 				4438392724C2A6F50047A8CF /* AppDelegate.swift */,
 				4438392924C2A6F50047A8CF /* SceneDelegate.swift */,
 				4438392B24C2A6F50047A8CF /* ViewController.swift */,
