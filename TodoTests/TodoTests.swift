@@ -19,9 +19,16 @@ class TodoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFolderCRUD() throws {
+        // singleton보다 객체 생성 후 사용하는 게 side effect을 없도록 보장하는 측면에서 좋다.
+        let folderController = FolderController()
+        let testFolder1 = "testFolder1"
+        
+        let resultTestFolder1: Folder = folderController.createFolder(name: testFolder1)
+
+        XCTAssertEqual(resultTestFolder1.name, testFolder1)
+        XCTAssertEqual(resultTestFolder1.order, 1)
+        
     }
 
     func testPerformanceExample() throws {
