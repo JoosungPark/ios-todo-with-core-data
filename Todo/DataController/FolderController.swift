@@ -12,7 +12,6 @@ import Foundation
 struct FolderController {
     
     func createFolder(title: String) -> Folder {
-//        let folder = Folder()
         let folder = Folder.newInstance(title: title)
         folder.order = 1
         return folder
