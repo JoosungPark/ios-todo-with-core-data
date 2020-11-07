@@ -63,7 +63,12 @@ class TodoTests: XCTestCase {
         }
         
         
+        // 다음 주에
+        // delete 관련 코드는 제가 작성하고 추후 검수만 하고
+        // Todo도 테스트 코드를 추가해 온다.
         
+        // 개괄적인 건 작성해올 게용
+        // Todo와 Folder를 같이 테스트하는 건 다음 스터디에서 하자
         
     }
 }
