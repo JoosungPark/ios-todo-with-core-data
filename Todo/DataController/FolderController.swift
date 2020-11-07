@@ -22,5 +22,10 @@ struct FolderController {
         return try Folder.fetchOne(id: id)
     }
     
+    //folderController.updateFolder(id: updateFolderId, title: updatedTitle)
+    
+//    func updateFolder(id: TodoId, title: String? = nil, order: Int? = nil, title: String? = nil, folderType: String) {
+        
+//    }
     
 }

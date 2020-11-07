@@ -8,6 +8,6 @@
 
 import Foundation
 
-public typealias FolderId = Int64
-public typealias TodoId = Int64
+public typealias FolderId = Int
+public typealias TodoId = Int
 

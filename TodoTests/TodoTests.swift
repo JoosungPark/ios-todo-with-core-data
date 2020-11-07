@@ -30,13 +30,13 @@ class TodoTests: XCTestCase {
         XCTAssertEqual(resultTestFolder1.order, 1)
         
         // retrieve
-        let testFolderId: Int64 = 1
+        let testFolderId = 1
         let retrievedFolder: Folder? = try! folderController.retrieveFolder(id: testFolderId)
         
         XCTAssertNotNil(retrievedFolder)
         XCTAssertEqual(retrievedFolder!.id, testFolderId)
         
-        let testNilableFolderId: Int64 = 0
+        let testNilableFolderId = 0
         do {
             _ = try folderController.retrieveFolder(id: testNilableFolderId)
             XCTFail()
@@ -46,7 +46,7 @@ class TodoTests: XCTestCase {
             XCTFail()
         }
         
-//        // update
+        // update
 //        let updateFolderId: FolderId = 1
 //        let updatedTitle = "updated Title"
 //        let updatedFolder: Folder? = folderController.updateFolder(id: updateFolderId, title: updatedTitle)

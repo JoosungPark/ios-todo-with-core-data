@@ -12,8 +12,8 @@ import CoreData
 
 @objc(Folder)
 public class Folder: NSManagedObject {
-    @NSManaged public var id: Int64
-    @NSManaged public var order: Int64
+    @NSManaged public var id: Int
+    @NSManaged public var order: Int
     @NSManaged public var title: String!
     @NSManaged public var isOpened: Bool
     @NSManaged public var todos: NSMutableOrderedSet

@@ -12,7 +12,7 @@ import CoreData
 
 @objc(Todo)
 public class Todo: NSManagedObject {
-    @NSManaged public var id: Int64
+    @NSManaged public var id: Int
     @NSManaged public var title: String!
     @NSManaged public var desc: String?
     @NSManaged public var createdAt: Date!
@@ -20,8 +20,8 @@ public class Todo: NSManagedObject {
     @NSManaged public var dueDate: Date?
     @NSManaged public var closedAt: Date?
     @NSManaged public var status: String!
-    @NSManaged public var parentId: Int64
-    @NSManaged public var todoIds: [Int64]
-    @NSManaged public var order: Int64
+    @NSManaged public var parentId: Int
+    @NSManaged public var todoIds: [Int]
+    @NSManaged public var order: Int
     @NSManaged public var folder: Folder!
 }

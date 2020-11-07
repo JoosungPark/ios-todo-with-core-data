@@ -18,7 +18,7 @@
         <attribute name="parentId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
-        <attribute name="todoIds" attributeType="Transformable" customClassName="[Int64]"/>
+        <attribute name="todoIds" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[Int]"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="folder" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="todos" inverseEntity="Folder"/>
     </entity>
