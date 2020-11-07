@@ -10,4 +10,6 @@ import Foundation
 
 enum TodoError: Error {
     case itemNotFound
+    
+    case invalidUpdatedValue
 }

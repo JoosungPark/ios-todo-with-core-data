@@ -10,6 +10,14 @@ import Foundation
 
 
 struct FolderController {
+
+    // 참고, https://stackoverflow.com/questions/27178211/how-to-make-a-function-operate-on-a-sequence-of-optional-values
+    private func checkParamsAllNil<E, S: Sequence>(params: S) throws where S.Element == Optional<E> {
+//        if params.filter({ $0 == nil }).count == 0 {
+//            throw TodoError.invalidUpdatedValue
+//        }
+        // 향후 구현
+    }
     
     func createFolder(title: String) -> Folder {
         let folder = Folder.newInstance(title: title)
@@ -22,10 +30,26 @@ struct FolderController {
         return try Folder.fetchOne(id: id)
     }
     
-    //folderController.updateFolder(id: updateFolderId, title: updatedTitle)
-    
-//    func updateFolder(id: TodoId, title: String? = nil, order: Int? = nil, title: String? = nil, folderType: String) {
+    func updateFolder(id: TodoId,
+                      title: String? = nil,
+                      order: Int? = nil,
+                      isOpened: Bool? = nil,
+                      folderType: String? = nil) throws -> Folder {
         
-//    }
+        try checkParamsAllNil(params:  [title, order, isOpened, folderType])
+        
+        guard let folder = try retrieveFolder(id: id) else { throw TodoError.itemNotFound }
+        if let title = title {
+            folder.title = title
+        }
+        if let order = order {
+            folder.order = order
+        }
+        if let isOpened = isOpened {
+            folder.isOpened = isOpened
+        }
+        
+        fatalError()
+    }
     
 }

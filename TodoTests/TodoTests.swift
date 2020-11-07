@@ -47,9 +47,9 @@ class TodoTests: XCTestCase {
         }
         
         // update
-//        let updateFolderId: FolderId = 1
-//        let updatedTitle = "updated Title"
-//        let updatedFolder: Folder? = folderController.updateFolder(id: updateFolderId, title: updatedTitle)
+        let updateFolderId: FolderId = 1
+        let updatedTitle = "updated Title"
+        let updatedFolder: Folder? = folderController.updateFolder(id: updateFolderId, title: updatedTitle)
         
         
     }
