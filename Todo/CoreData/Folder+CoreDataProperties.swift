@@ -53,7 +53,12 @@ public extension Folder {
         let fetch: NSFetchRequest<Folder> = Folder.fetchRequest()
         fetch.predicate = NSPredicate(format: "%K == %lld", #keyPath(Folder.id), id)
         
-        return try context.fetch(fetch).first
+        let result = try context.fetch(fetch)
+        if result.count == 1, let result = result.first {
+            return result
+        } else {
+            throw TodoError.itemNotFound
+        }
     }
 }
 

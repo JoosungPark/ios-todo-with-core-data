@@ -31,14 +31,26 @@ class TodoTests: XCTestCase {
         
         // retrieve
         let testFolderId: Int64 = 1
-        let retrievedFolder: Folder? = folderController.retrieveFolder(id: testFolderId)
+        let retrievedFolder: Folder? = try! folderController.retrieveFolder(id: testFolderId)
         
         XCTAssertNotNil(retrievedFolder)
         XCTAssertEqual(retrievedFolder!.id, testFolderId)
         
         let testNilableFolderId: Int64 = 0
-        let nilableFolder: Folder? = folderController.retrieveFolder(id: testNilableFolderId)
-        XCTAssertNil(nilableFolder)
+        do {
+            _ = try folderController.retrieveFolder(id: testNilableFolderId)
+            XCTFail()
+        } catch let error as TodoError {
+            XCTAssertEqual(error, .itemNotFound)
+        } catch {
+            XCTFail()
+        }
+        
+//        // update
+//        let updateFolderId: FolderId = 1
+//        let updatedTitle = "updated Title"
+//        let updatedFolder: Folder? = folderController.updateFolder(id: updateFolderId, title: updatedTitle)
+        
         
     }
 }

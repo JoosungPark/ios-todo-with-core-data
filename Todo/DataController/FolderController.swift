@@ -18,13 +18,8 @@ struct FolderController {
         return folder
     }
     
-    func retrieveFolder(id: FolderId) -> Folder? {
-        do {
-            return try Folder.fetchOne(id: id)
-        } catch let error as NSError {
-            print("failed to retrieveFolder: at FolderController \(error) \(error.userInfo)")
-            return nil
-        }
+    func retrieveFolder(id: FolderId) throws -> Folder? {
+        return try Folder.fetchOne(id: id)
     }
     
     
