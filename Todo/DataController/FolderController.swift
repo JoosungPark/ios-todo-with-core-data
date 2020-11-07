@@ -34,10 +34,14 @@ struct FolderController {
                       title: String? = nil,
                       order: Int? = nil,
                       isOpened: Bool? = nil,
-                      folderType: String? = nil) throws -> Folder {
+                      folderType: FolderType? = nil) throws -> Folder {
+     
+        // TODO 구현 할 것
+//        try checkParamsAllNil(params:  [title, order, isOpened, folderType])
         
-        try checkParamsAllNil(params:  [title, order, isOpened, folderType])
-        
+        if title == nil && order == nil && isOpened == nil && folderType == nil {
+            throw TodoError.invalidUpdatedValue
+        }
         guard let folder = try retrieveFolder(id: id) else { throw TodoError.itemNotFound }
         if let title = title {
             folder.title = title
@@ -48,8 +52,11 @@ struct FolderController {
         if let isOpened = isOpened {
             folder.isOpened = isOpened
         }
+        if let folderType = folderType {
+            folder.folderType = folderType
+        }
         
-        fatalError()
+        return folder
     }
     
 }

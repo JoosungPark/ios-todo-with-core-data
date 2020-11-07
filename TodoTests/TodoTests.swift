@@ -49,7 +49,20 @@ class TodoTests: XCTestCase {
         // update
         let updateFolderId: FolderId = 1
         let updatedTitle = "updated Title"
-        let updatedFolder: Folder? = folderController.updateFolder(id: updateFolderId, title: updatedTitle)
+        let updatedFolder: Folder = try! folderController.updateFolder(id: updateFolderId, title: updatedTitle)
+        XCTAssertEqual(updatedFolder.title, updatedTitle)
+        
+        let failedUpdateFolderId = 0
+        do {
+            _ = try folderController.updateFolder(id: failedUpdateFolderId, title: updatedTitle)
+            XCTFail()
+        } catch let error as TodoError {
+            XCTAssertEqual(error, .itemNotFound)
+        } catch {
+            XCTFail()
+        }
+        
+        
         
         
     }
