@@ -75,4 +75,18 @@ class TodoTests: XCTestCase {
     
     // 개괄적인 건 작성해올 게용
     // Todo와 Folder를 같이 테스트하는 건 다음 스터디에서 하자
+    
+    func testDeleteFolder() throws {
+        let deleteFolderId: FolderId = 1
+        do {
+            try folderController.deleteFolder(id: deleteFolderId)
+            XCTFail()
+        } catch let error as TodoError {
+            XCTAssertEqual(error, .itemNotFound)
+        } catch {
+            XCTFail()
+        }
+        
+        
+    }
 }
