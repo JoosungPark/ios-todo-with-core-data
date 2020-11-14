@@ -11,12 +11,10 @@ import Foundation
 
 struct FolderController {
 
-    // 참고, https://stackoverflow.com/questions/27178211/how-to-make-a-function-operate-on-a-sequence-of-optional-values
-    private func checkParamsAllNil<E, S: Sequence>(params: S) throws where S.Element == Optional<E> {
-//        if params.filter({ $0 == nil }).count == 0 {
-//            throw TodoError.invalidUpdatedValue
-//        }
-        // 향후 구현
+    private func checkParamsAllNil(params: [Any?]) throws {
+        if params.filter({ $0 == nil }).count == 0 {
+            throw TodoError.invalidUpdatedValue
+        }
     }
     
     func createFolder(title: String) -> Folder {
@@ -36,9 +34,7 @@ struct FolderController {
                       isOpened: Bool? = nil,
                       folderType: FolderType? = nil) throws -> Folder {
      
-        // TODO 구현 할 것
-//        try checkParamsAllNil(params:  [title, order, isOpened, folderType])
-        
+        try checkParamsAllNil(params:  [title, order, isOpened, folderType])
         if title == nil && order == nil && isOpened == nil && folderType == nil {
             throw TodoError.invalidUpdatedValue
         }
