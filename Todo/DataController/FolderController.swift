@@ -11,12 +11,6 @@ import Foundation
 
 struct FolderController {
 
-    private func checkParamsAllNil(params: [Any?]) throws {
-        if params.filter({ $0 == nil }).count == 0 {
-            throw TodoError.invalidUpdatedValue
-        }
-    }
-    
     func createFolder(title: String) -> Folder {
         let folder = Folder.newInstance(title: title)
         folder.id = 1
@@ -55,4 +49,16 @@ struct FolderController {
         return folder
     }
     
+    func deleteFolder(id: TodoId) throws {
+        try Folder.delete(id: id)
+    }
+}
+
+
+private extension FolderController {
+    private func checkParamsAllNil(params: [Any?]) throws {
+        if params.filter({ $0 == nil }).count == 0 {
+            throw TodoError.invalidUpdatedValue
+        }
+    }
 }
