@@ -11,20 +11,24 @@ import Foundation
 import CoreData
 
 
+// MARK: Folder extension
 extension Folder {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Folder> {
         return NSFetchRequest<Folder>(entityName: Folder.entityName)
     }
 
 }
 
+
+// MARK: Folder EntityNamePresentable extension
 extension Folder: EntityNamePresentable {
     static var entityName: String {
         get { return "Folder" }
     }
 }
 
+
+// MARK: Folder public extension
 public extension Folder {
     var folderType: FolderType {
         get {
@@ -37,6 +41,8 @@ public extension Folder {
     }
 }
 
+
+// MARK: Folder public extension about class func
 public extension Folder {
     class func newInstance(title: String) -> Folder {
         let context = CoreDataManager.shared.managedContext
@@ -51,7 +57,7 @@ public extension Folder {
         let context = manager.managedContext
         
         let fetch: NSFetchRequest<Folder> = Folder.fetchRequest()
-        fetch.predicate = NSPredicate(format: "%K == %lld", #keyPath(Folder.id), id)
+        fetch.predicate = getIdPoredicates(id: id)
         
         let result = try context.fetch(fetch)
         if result.count == 1, let result = result.first {
@@ -60,8 +66,21 @@ public extension Folder {
             throw TodoError.itemNotFound
         }
     }
+    
+    class func getIdPoredicates(id: FolderId) -> NSPredicate {
+        return NSPredicate(format: "%K == %lld", #keyPath(Folder.id), id)
+    }
 }
 
+
+// MARK: TodoCoreCompatible extension about Folder
+extension TodoCorePresentable where Base: Folder {
+    var idPredicates: NSPredicate {
+        get {
+            return NSPredicate(format: "%K == %lld", #keyPath(Folder.id), base.id)
+        }
+    }
+}
 
 
 
