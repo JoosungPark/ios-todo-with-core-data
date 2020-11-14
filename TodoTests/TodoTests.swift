@@ -18,6 +18,10 @@ class TodoTests: XCTestCase {
         }
     }
     
+    override class func setUp() {
+        CoreDataManager.shared.clear()
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -25,16 +29,18 @@ class TodoTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testCreateFolder() throws {
+    
+    func testFolderCRUD() throws {
+        
+        // create
         let testFolder1 = "testFolder1"
         let resultTestFolder1: Folder = folderController.createFolder(title: testFolder1)
 
         XCTAssertEqual(resultTestFolder1.title, testFolder1)
         XCTAssertEqual(resultTestFolder1.order, 1)
-    }
-    
-    func testReadFolder() throws {
+        
+        
+        // read
         let testFolderId = 1
         let retrievedFolder: Folder? = try! folderController.retrieveFolder(id: testFolderId)
         
@@ -50,9 +56,9 @@ class TodoTests: XCTestCase {
         } catch {
             XCTFail()
         }
-    }
-    
-    func testUpdateFolder() throws {
+        
+        
+        // update
         let updateFolderId: FolderId = 1
         let updatedTitle = "updated Title"
         let updatedFolder: Folder = try! folderController.updateFolder(id: updateFolderId, title: updatedTitle)
@@ -67,9 +73,9 @@ class TodoTests: XCTestCase {
         } catch {
             XCTFail()
         }
-    }
-    
-    func testDeleteFolder() throws {
+        
+        
+        // delete
         let failedDeleteFolderId: FolderId = 2
         do {
             try folderController.deleteFolder(id: failedDeleteFolderId)
