@@ -24,3 +24,13 @@ extension Todo: EntityNamePresentable {
         get { return "Todo" }
     }
 }
+
+
+public extension Todo {
+    class func clear() {
+        let context = CoreDataManager.shared.managedContext
+        let fetch: NSFetchRequest<Todo> = Todo.fetchRequest()
+        
+        try! context.fetch(fetch).forEach({ context.delete( $0) })
+    }
+}

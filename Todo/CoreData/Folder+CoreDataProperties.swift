@@ -43,6 +43,14 @@ public extension Folder {
 
 // MARK: Folder public extension about class func
 public extension Folder {
+    class func clear() {
+        let context = CoreDataManager.shared.managedContext
+        let fetch: NSFetchRequest<Folder> = Folder.fetchRequest()
+        
+        try! context.fetch(fetch).forEach({ context.delete( $0) })
+    }
+    
+    
     class func newInstance(title: String) -> Folder {
         let context = CoreDataManager.shared.managedContext
         let entity = NSEntityDescription.entity(forEntityName: Folder.entityName, in: context)!

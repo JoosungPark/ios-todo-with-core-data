@@ -39,4 +39,11 @@ public class CoreDataManager {
             }
         }
     }
+    
+    public func clear() {
+        Folder.clear()
+        Todo.clear()
+        
+        CoreDataManager.shared.saveContext()
+    }
 }
