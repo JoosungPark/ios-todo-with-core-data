@@ -80,6 +80,11 @@ class TodoTests: XCTestCase {
             XCTFail()
         }
         
-        
+        let deleteFolderId: FolderId = 1
+        do {
+            try folderController.deleteFolder(id: deleteFolderId)
+        } catch {
+            XCTFail()
+        }
     }
 }
