@@ -112,33 +112,33 @@ fileprivate extension TodoCorePresentable where Base: Folder {
 extension Folder {
     
     @objc(insertObject:inTodosAtIndex:)
-    @NSManaged public func insertIntoTodos(_ value: Todo, at idx: Int)
+    @NSManaged public func insertIntoTasks(_ value: Task, at idx: Int)
     
     @objc(removeObjectFromTodosAtIndex:)
-    @NSManaged public func removeFromTodos(at idx: Int)
+    @NSManaged public func removeFromTasks(at idx: Int)
     
     @objc(insertTodos:atIndexes:)
-    @NSManaged public func insertIntoTodos(_ values: [Todo], at indexes: NSIndexSet)
+    @NSManaged public func insertIntoTasks(_ values: [Task], at indexes: NSIndexSet)
     
     @objc(removeTodosAtIndexes:)
-    @NSManaged public func removeFromTodos(at indexes: NSIndexSet)
+    @NSManaged public func removeFromTasks(at indexes: NSIndexSet)
     
     @objc(replaceObjectInTodosAtIndex:withObject:)
-    @NSManaged public func replaceTodos(at idx: Int, with value: Todo)
+    @NSManaged public func replaceTasks(at idx: Int, with value: Task)
     
     @objc(replaceTodosAtIndexes:withTodos:)
-    @NSManaged public func replaceTodos(at indexes: NSIndexSet, with values: [Todo])
+    @NSManaged public func replaceTasks(at indexes: NSIndexSet, with values: [Task])
     
     @objc(addTodosObject:)
-    @NSManaged public func addToTodos(_ value: Todo)
+    @NSManaged public func addToTasks(_ value: Task)
     
     @objc(removeTodosObject:)
-    @NSManaged public func removeFromTodos(_ value: Todo)
+    @NSManaged public func removeFromTasks(_ value: Task)
     
     @objc(addTodos:)
-    @NSManaged public func addToTodos(_ values: NSOrderedSet)
+    @NSManaged public func addToTasks(_ values: NSOrderedSet)
     
     @objc(removeTodos:)
-    @NSManaged public func removeFromTodos(_ values: NSOrderedSet)
+    @NSManaged public func removeFromTasks(_ values: NSOrderedSet)
     
 }

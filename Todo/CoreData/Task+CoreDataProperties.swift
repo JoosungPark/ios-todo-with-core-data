@@ -1,5 +1,5 @@
 //
-//  Todo+CoreDataProperties.swift
+//  Task+CoreDataProperties.swift
 //  Todo
 //
 //  Created by 박주성 on 7/18/20.
@@ -11,25 +11,25 @@ import Foundation
 import CoreData
 
 
-extension Todo {
+extension Task {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Todo> {
-        return NSFetchRequest<Todo>(entityName: Todo.entityName)
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Task> {
+        return NSFetchRequest<Task>(entityName: Task.entityName)
     }
 
 }
 
-extension Todo: EntityNamePresentable {
+extension Task: EntityNamePresentable {
     static var entityName: String {
         get { return "Todo" }
     }
 }
 
 
-public extension Todo {
+public extension Task {
     class func clear() {
         let context = CoreDataManager.shared.managedContext
-        let fetch: NSFetchRequest<Todo> = Todo.fetchRequest()
+        let fetch: NSFetchRequest<Task> = Task.fetchRequest()
         
         try! context.fetch(fetch).forEach({ context.delete( $0) })
     }

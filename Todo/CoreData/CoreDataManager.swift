@@ -42,7 +42,7 @@ public class CoreDataManager {
     
     public func clear() {
         Folder.clear()
-        Todo.clear()
+        Task.clear()
         
         CoreDataManager.shared.saveContext()
     }
