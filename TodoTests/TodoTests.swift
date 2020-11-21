@@ -12,22 +12,20 @@ import XCTest
 class TodoTests: XCTestCase {
 
     // // singleton보다 객체 생성 후 사용하는 게 side effect을 없도록 보장하는 측면에서 좋다.
-    private var folderController: FolderController {
-        get {
-            return FolderController()
-        }
-    }
-    
-    override class func setUp() {
-        CoreDataManager.shared.clear()
-    }
+    private var folderController: FolderController!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        CoreDataManager.shared.clear()
+        folderController = FolderController()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testFolderCRUD1() throws {
+        
     }
     
     func testFolderCRUD() throws {
