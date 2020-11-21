@@ -28,6 +28,9 @@
 		449760AD2543DDE10037749B /* FolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449760AC2543DDE10037749B /* FolderController.swift */; };
 		449760CA2543E3440037749B /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449760C92543E3440037749B /* TypeAlias.swift */; };
 		44FA2A782556502200A43F82 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA2A772556502200A43F82 /* Error.swift */; };
+		69635EC12568C18800A50833 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69635EC02568C18800A50833 /* TaskTests.swift */; };
+		69635EC52568C30900A50833 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69635EC42568C30900A50833 /* TaskController.swift */; };
+		69635EC92568C3A100A50833 /* TaskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69635EC82568C3A100A50833 /* TaskStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		449760C92543E3440037749B /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		44FA2A772556502200A43F82 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		604401DF2101D772646643ED /* Pods_TodoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69635EC02568C18800A50833 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		69635EC42568C30900A50833 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		69635EC82568C3A100A50833 /* TaskStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatus.swift; sourceTree = "<group>"; };
 		6ACD2BBE2DB7C374784A0D74 /* Pods-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.debug.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		A1328C3F3FFE1B918B400D49 /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
 		C1D8543278BE96E3B2943DFA /* Pods-TodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoTests/Pods-TodoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 			children = (
 				4438393E24C2A6F80047A8CF /* TodoTests.swift */,
 				4438394024C2A6F80047A8CF /* Info.plist */,
+				69635EC02568C18800A50833 /* TaskTests.swift */,
 			);
 			path = TodoTests;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 				4438394F24C2AC850047A8CF /* Folder+CoreDataClass.swift */,
 				4438395024C2AC850047A8CF /* Folder+CoreDataProperties.swift */,
 				449760A12543D6C60037749B /* FolderType.swift */,
+				69635EC82568C3A100A50833 /* TaskStatus.swift */,
 				4438394A24C2A75E0047A8CF /* Todo.xcdatamodeld */,
 				234D217B24DBD3C80044CA05 /* CoreDataManager.swift */,
 			);
@@ -168,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				449760AC2543DDE10037749B /* FolderController.swift */,
+				69635EC42568C30900A50833 /* TaskController.swift */,
 			);
 			path = DataController;
 			sourceTree = "<group>";
@@ -392,6 +401,7 @@
 				4438395324C2AC850047A8CF /* Folder+CoreDataClass.swift in Sources */,
 				4438392824C2A6F50047A8CF /* AppDelegate.swift in Sources */,
 				449760AD2543DDE10037749B /* FolderController.swift in Sources */,
+				69635EC52568C30900A50833 /* TaskController.swift in Sources */,
 				4438392A24C2A6F50047A8CF /* SceneDelegate.swift in Sources */,
 				4438395124C2AC850047A8CF /* Task+CoreDataClass.swift in Sources */,
 				445F76212560975B007B2B2B /* TodoCorePresentable.swift in Sources */,
@@ -401,6 +411,7 @@
 				4438395224C2AC850047A8CF /* Task+CoreDataProperties.swift in Sources */,
 				44FA2A782556502200A43F82 /* Error.swift in Sources */,
 				23CD6505253FD77D0098D31B /* EntityNamePresentable.swift in Sources */,
+				69635EC92568C3A100A50833 /* TaskStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69635EC12568C18800A50833 /* TaskTests.swift in Sources */,
 				4438393F24C2A6F80047A8CF /* TodoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

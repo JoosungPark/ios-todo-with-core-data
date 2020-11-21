@@ -25,6 +25,17 @@ extension Task: EntityNamePresentable {
     }
 }
 
+public extension Task {
+    var status: TaskStatus {
+        get {
+            TaskStatus(rawValue: statusValue)!
+        }
+        set {
+            statusValue = newValue.rawValue
+        }
+    }
+}
+
 
 public extension Task {
     class func clear() {

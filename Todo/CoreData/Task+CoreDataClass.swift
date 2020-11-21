@@ -19,7 +19,7 @@ public class Task: NSManagedObject {
     @NSManaged public var updatedAt: Date?
     @NSManaged public var dueDate: Date?
     @NSManaged public var closedAt: Date?
-    @NSManaged public var status: String!
+    @NSManaged public var statusValue: String!
     @NSManaged public var parentId: Int
     @NSManaged public var taskIds: [Int]
     @NSManaged public var order: Int
