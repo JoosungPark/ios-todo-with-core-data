@@ -98,7 +98,7 @@ public extension Folder {
 
 
 // MARK: TodoCoreCompatible extension about Folder
-extension TodoCorePresentable where Base: Folder {
+fileprivate extension TodoCorePresentable where Base: Folder {
     var idPredicates: NSPredicate {
         get {
             return NSPredicate(format: "%K == %lld", #keyPath(Folder.id), base.id)
